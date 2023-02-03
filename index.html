@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main Container -->
+    <section class="container-fluid ">
+
+        <!-- Main row class -->
+        <div class="row">
+            <!-- Side bar -->
+            <div class="col-2 desktop" id="Side_bar">
+
+                <div class="l-navbar mt-5" id="nav-bar">
+                    <nav class="nav d-block">
+                        <div style="padding: 20%;"><a href="#" class="nav_logo text-decoration-none text-center"><img src="./img/Logo"
+                                    alt="logo" class="img-fluid"><span class="nav_logo-name logo">Logohere</span></a></div>
+                            <div class="nav_list">
+                            <div style="padding:20%;">
+                                <ul class="list-unstyled ">
+                                    <li class="dashboard_padding_option"><a href="#" class="nav_link active text-decoration-none"><img
+                                                src="./img/dashboard.png" alt=""><span class="nav_name dashboard_padding_option_text">Dashboard</span>
+                                        </a> </li>
+                                    <li class="dashboard_padding_option"><a href="#" class="nav_link text-decoration-none  "><img src="./img/cal.png"
+                                                alt=""><span class="nav_name dashboard_padding_option_text active">Calender</span> </a> </li>
+                                    <li class="dashboard_padding_option "><a href="#" class="nav_link text-decoration-none"><img src="./img/project.png"
+                                                alt=""><span class="nav_name dashboard_padding_option_text">Project</span> </a> </li>
+                                    <li class="dashboard_padding_option"><a href="#" class="nav_link text-decoration-none"><img src="./img/team.png"
+                                                alt=""><span class="nav_name dashboard_padding_option_text">Team</span> </a> </li>
+                                    <li class="dashboard_padding_option"><a href="#" class="nav_link text-decoration-none"><img src="./img/setting.png"
+                                                alt=""><span class="nav_name dashboard_padding_option_text">Setting</span></a></li>
+
+                                </ul>
+                            </div>
+                            </div>
+                         <div style="padding: 20%;"><button onclick="toggle()" class="btn btn-rounded"><img src="./img/toggle_button.png" class="img-fluid" alt="toggle_button"></button></div>   
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Side bar end -->
+
+            <!-- Not side bar part -->
+
+            <div class="col-10" id="main_content">
+                <!-- header part of not side bar part -->
+                <div class="row mt-3">
+                    <!-- Search Bar -->
+                    <div class="col-9 d-flex justify-content-between">
+                        <div class="form-outline w-100 "><input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <div style="margin-left: 1%;"><button class="btn btn-primary"
+                                style="background: #5630D3;">Search</button></div>
+                    </div>
+                    <div class="col-3 d-flex justify-content-end">
+                        <span
+                            style="padding: 2%;font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 17px;line-height: 26px;color: #000000;">Jane
+                            Cooper</span><span><img src="./img/Jane Cooper.png" class="img-fluid" alt="Jane Cooper">
+                    </div>
+                </div>
+                <!-- main part -->
+                <div class="row mt-3">
+                    <!-- main part column 1 -->
+                    <div class="col-sm-9 ">
+                        <div class="row Row counter">
+                            <div class="col-sm-3 bg d-flex justify-content-between " style="padding: 29px;">
+                                <div><span class="d-block Row1_text">Monthly Working<br>Hours</span><span
+                                        class="d-block Row1_num1" style="padding-top: 32px">160</span>
+                                </div>
+                                <div><img src="./img/calender.png" class="img-fluid" alt="calender"></div>
+                            </div>
+                            <div class="col-sm-3 bg d-flex justify-content-between" style="padding: 29px;">
+                                <div><span class="d-block Row1_text">Monthly Working<br>Hours</span><span
+                                        class="d-block Row1_num1" style="padding-top: 32px">40</span>
+                                </div>
+                                <div><img src="./img/clock.png" class="img-fluid" alt="clock"></div>
+                            </div>
+                            <div class="col-sm-3  bg d-flex justify-content-between" style="padding: 29px;">
+                                <div><span class="d-block Row1_text">Late Days<br>.</span><span
+                                        class="d-block Row1_num1" style="padding-top: 32px">9</span>
+                                </div>
+                                <div><img src="./img/running-man.png" class="img-fluid" alt="runningicon"></div>
+                            </div>
+                            <div class="col-sm-3  bg d-flex justify-content-between" style="padding: 29px;">
+                                <div><span class="d-block Row1_text">Leave Without<br>pay</span><span
+                                        class="d-block Row1_num1" style="padding-top: 32px">2</span>
+                                </div>
+                                <div><img src="./img/downface.png" class="img-fluid" alt="downface"></div>
+
+                            </div>
+                        </div>
+                        <div class="row Row mt-4">
+                            <div class="col-sm-4 bg " style="border-right: 0.2px solid #939393;padding: 25px;"><span class="d-block Row2_style">Leaves Remaining</span><span
+                                    class="d-block Row2_num1">10</span></div>
+                            <div class="col-sm-4 bg" style="border-right: 0.5px solid #939393; padding: 25px;"><span class="d-block Row2_style">Leaves Taken</span><span
+                                    class="d-block Row2_num2">06</span></div>
+                            <div class="col-sm-4 bg" style="padding: 25px;"><span class="d-block Row2_style">Leaves pending to
+                                    approve</span><span class="d-block Row2_num3">01</span></div>
+                        </div>
+                        <div class="row Row mt-4">
+                            <div class="col-sm-6" style="overflow-x: auto;" >
+                                <div class="Row3_text" style="padding-bottom:3%;"><b>Employee on leave today</b></div>
+                                <table class="table">
+                                    <thead
+                                        style="background: linear-gradient(91.37deg, rgba(101, 144, 255, 0.43) 13.98%, rgba(126, 154, 255, 0.47) 34.04%, rgba(197, 199, 255, 0.72) 55.12%, rgba(187, 176, 255, 0.409659) 73.79%, rgba(219, 202, 255, 0.96) 94.58%);">
+                                        <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Duration</th>
+                                            <th scope="col">Leave Status</th>
+                                            <th scope="col">Leave Ends</th>
+                                            <th scope="col">Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="background-color: #FFFFFF;">
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td>3.00</td>
+                                            <td>12/01/2023</td>
+                                            <td>14/01/2023</td>
+                                            <td>Full Day</td>
+                                        </tr>
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td>3.00</td>
+                                            <td>12/01/2023</td>
+                                            <td>14/01/2023</td>
+                                            <td>Full Day</td>
+                                        </tr>
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td>3.00</td>
+                                            <td>12/01/2023</td>
+                                            <td>14/01/2023</td>
+                                            <td>Full Day</td>
+                                        </tr>
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td>3.00</td>
+                                            <td>12/01/2023</td>
+                                            <td>14/01/2023</td>
+                                            <td>Full Day</td>
+                                        </tr>
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td>3.00</td>
+                                            <td>12/01/2023</td>
+                                            <td>14/01/2023</td>
+                                            <td>Full Day</td>
+                                        </tr>
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td>3.00</td>
+                                            <td>12/01/2023</td>
+                                            <td>14/01/2023</td>
+                                            <td>Full Day</td>
+                                        </tr>
+                                    </tbody>
+
+
+                                </table>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="Row3_text"  style="padding-bottom:3%;"><b>Conversations</b></div>
+                                <div class="row" style="background-color: #FFFFFF;padding: 4%;">
+                                    <div class="col-5">
+                                        <p><u style="color:#5630D3;">Latest Chats</u></p>
+                                    </div>
+                                    <div class="col-5">
+                                        <p>Scheduled posts</p>
+                                    </div>
+                                    <div class="col-2"><img src="./img/More Circle.png" class="img-fluid" alt=""></div>
+                                </div>
+                                <div class="row" style="background-color: #FFFFFF;">
+                                    <div class="d-flex mb-5">
+                                        <div class="col-2"><img src="./img/Yatri.png" class="img-fluid" alt="Yatri"></div>
+                                        <div class="col-10">
+                                            <div>Yatri Patel</div>
+                                            <div>The tasks which we submitted yesterday requires design...</div>
+                                            <div class="d-flex justify-content-between">
+                                                <div><img src="./img/heart" class="img-fluid" alt="heart"><span style="padding-left:10px;">39</span></div>
+                                                <div><img src="./img/Combined-Shape.png" class="img-fluid" alt="heart"><span style="padding-left:10px;">24</span>
+                                                </div>
+                                                <div><img src="./img/combibe2" class="img-fluid" alt="heart"><span style="padding-left:10px;">102</span></div>
+                                            </div>
+                                    </div>
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                    <div class="col-2"><img src="./img/kinnari.png" class="img-fluid" alt="Yatri"></div>
+                                    <div class="col-10">
+                                        <div>Kinnari Patel</div>
+                                        <div>The tasks which we submitted yesterday requires design...</div>
+                                        <div class="d-flex justify-content-between">
+                                            <div><img src="./img/heart" class="img-fluid" alt="heart"><span style="padding-left:10px;">39</span></div>
+                                            <div><img src="./img/Combined-Shape.png" class="img-fluid" alt="heart"><span style="padding-left: 10px;">24</span>
+                                            </div>
+                                            <div><img src="./img/combibe2" class="img-fluid" alt="heart"><span style="padding-left:10px;">102</span></div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="row Row  mt-2" style="overflow-x: auto;">
+                            <p class="h5">Assigned Task</p>
+                            <table class="table">
+                                <thead
+                                    style="background: linear-gradient(91.37deg, rgba(101, 144, 255, 0.43) 13.98%, rgba(126, 154, 255, 0.47) 34.04%, rgba(197, 199, 255, 0.72) 55.12%, rgba(187, 176, 255, 0.409659) 73.79%, rgba(219, 202, 255, 0.96) 94.58%);">
+                                    <tr>
+                                        <th scope="col">Task Name</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Logged Hours</th>
+                                        <th scope="col">Task Efficiency</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="background-color: #FFFFFF;">
+                                <tr>
+                                    <td>Magento-VP file-edits</td>
+                                    <td>02 Jan 2023</td>
+                                    <td>04:00 hrs</td>
+                                    <td>100%</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Magento-VP file-edits</td>
+                                    <td>02 Jan 2023</td>
+                                    <td>04:00 hrs</td>
+                                    <td>100%</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Magento-VP file-edits</td>
+                                    <td>02 Jan 2023</td>
+                                    <td>04:00 hrs</td>
+                                    <td>100%</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Magento-VP file-edits</td>
+                                    <td>02 Jan 2023</td>
+                                    <td>04:00 hrs</td>
+                                    <td>100%</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Magento-VP file-edits</td>
+                                    <td>02 Jan 2023</td>
+                                    <td>04:00 hrs</td>
+                                    <td>100%</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- main part column 2 -->
+                    <div class="col-sm-3">
+                        <div class="row Row" style="background: #FFFFFF;">
+                            <div class="col d-flex justify-content-between bg_side" >
+                                <div class="bar_text"><b>Birthday Today</b></div>
+                                <div><img src="./img/Birthdaycake.png" class="img-fluid" alt="Birthdaycake"></div>
+                            </div>
+                            <div class="row mb-4 mt-2">
+                                <div class="col-sm-2"><img src="./img/Icon 1.png" class="img-fluid" alt="Shubham"></div>
+                                <div class="col-sm-10">
+                                    <div class="bg_text">Shubham Mehta</div>
+                                    <div class="bg_subtext">UX/UI Designer</div>
+                                </div>
+                                
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-2"><img src="./img/Icon2.png" class="img-fluid" alt="Palak"></div>
+                                <div class="col-sm-10 mb-2">
+                                    <div class="bg_text">Palak Panchal</div>
+                                    <div class="bg_subtext">UX/UI Designer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row Row" style="background: #FFFFFF;">
+                            <div class="col d-flex justify-content-between bg_side">
+                                <div class="bar_text"><b>Work Anniversary</b></div>
+                                <div><img src="./img/celebration.png" class="img-fluid" alt="celebration"></div>
+                            </div>
+                            <div class="row mt-3 mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-sm-2"><img src="./img/Suraj.png" class="img-fluid" alt="Suraj">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <div class="bg_text">Suraj Kushwaha</div>
+                                        <div class="bg_subtext">UX/UI Designer</div>
+                                    </div>
+                                    <div class="Row_2_date">1year</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row mt-3 mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-sm-2"><img src="./img/vishal.png" class="img-fluid" alt="Vishal">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <div class="bg_text">Vishal Prajapati</div>
+                                        <div class="bg_subtext">UX/UI Designer</div>
+                                    </div>
+                                    <div class="Row_2_date">2year</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row mt-3 mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-sm-2"><img src="./img/Uttam.png" class="img-fluid" alt="Uttam">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <div class="bg_text">Uttam Vora</div>
+                                        <div class="bg_subtext">UX/UI Designer</div>
+                                    </div>
+                                    <div class="Row_2_date">3year</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row mt-3 mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-sm-2"><img src="./img/Suraj2.png" class="img-fluid" alt="Suraj">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <div class="bg_text">Suraj Kushwaha</div>
+                                        <div class="bg_subtext">UX/UI Designer</div>
+                                    </div>
+                                    <div class="Row_2_date">3year</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row Row" style="background: #FFFFFF;">
+                            <div class="col d-flex justify-content-between bg_side">
+                                <div class="bar_text"><b>Holidays</b></div>
+                                <div><img src="./img/Holidays.png" class="img-fluid" alt="celebration"></div>
+                            </div>
+                            <div class="row mt-3 mb-3">
+                                <div class="col-sm-2"><img src="./img/kite.png" class="img-fluid" alt="kite"></div>
+                                <div class="col-sm-10">
+                                    <div class="bg_text">Uttarayan</div>
+                                    <div class="Row_3_date">14 Jan 2023 | Friday</div>
+                                </div>
+                            </div>
+                            <div class="row mt-3 mb-3">
+                                <div class="col-sm-2"><img src="./img/kite.png" class="img-fluid" alt="kite"></div>
+                                <div class="col-sm-10">
+                                    <div class="bg_text">Vashi Uttrayan</div>
+                                    <div class="Row_3_date">15 Jan 2023 | Saturday</div>
+                                </div>
+                            </div>
+                            <div class="row mt-3 mb-3">
+                                <div class="col-sm-2"><img src="./img/republic.png" class="img-fluid" alt="Shubham">
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="bg_text">Republic Day</div>
+                                    <div class="Row_3_date">26 Jan 2023 | Wednesday</div>
+                                </div>
+                            </div>
+                            <div class="row mt-3 mb-3">
+                                <div class="col-sm-2"><img src="./img/republic.png" class="img-fluid" alt="Shubham">
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="bg_text">Republic Day</div>
+                                    <div class="Row_3_date"> 26 Jan 2023 | Wednesday</div>
+                                </div>
+                            </div>
+                            <div class="row mt-3 mb-3">
+                                <div class="col-sm-2"><img src="./img/rakhi 1.png" class="img-fluid" alt="Shubham">
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="bg_text">Rakshabandhan</div>
+                                    <div class="Row_3_date">11 Aug 2023 | Thursday</div>
+                                </div>
+                            </div>
+                            <div class="row mt-3 mb-3">
+                                <div class="col-sm-2"><img src="./img/republic.png" class="img-fluid" alt="Shubham">
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="bg_text">Republic Day</div>
+                                    <div class="Row_3_date">26 Jan 2023 | Wednesday</div>
+                                </div>
+                            </div>
+                            <div class="row mt-3 mb-3">
+                                <div class="col-sm-2"><img src="./img/Holi.png" class="img-fluid" alt="holi"></div>
+                                <div class="col-sm-10">
+                                    <div class="bg_text">Holi</div>
+                                    <div class="Row_3_date">15 Jan 2023 | Friday</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+<script>
+    function toggle(){
+        var sidebar = document.getElementById("Side_bar");
+        if(sidebar.classList.contains('desktop')){
+            sidebar.classList.add("mobile");
+            sidebar.classList.remove("desktop");
+        }
+        else{
+            sidebar.classList.remove("mobile");
+            sidebar.classList.add("desktop");
+        }
+    }
+</script>
+</body>
+
+</html>
